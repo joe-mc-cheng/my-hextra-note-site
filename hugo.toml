@@ -1,0 +1,7 @@
+baseURL = "https://example.org/"
+title = "我的知識庫"
+theme = "hextra"
+
+# 啟用 Hextra 必備的輸出格式（為了搜尋功能）
+[outputs]
+home = ["HTML", "RSS", "JSON"]
