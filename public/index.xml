@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>我的知識庫 – 首頁</title>
+    <title>我的知識庫 – 我的雲端知識庫</title>
     <link>http://localhost:1313/my-hextra-note-site/</link>
-    <description>Recent content in 首頁 on 我的知識庫</description>
+    <description>Recent content in 我的雲端知識庫 on 我的知識庫</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     

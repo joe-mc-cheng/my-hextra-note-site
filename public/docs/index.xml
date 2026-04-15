@@ -16,10 +16,109 @@
     
     <item>
       <title></title>
-      <link>http://localhost:1313/my-hextra-note-site/docs/deployment-guide/</link>
+      <link>http://localhost:1313/my-hextra-note-site/docs/csv-chart-c%23/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/my-hextra-note-site/docs/deployment-guide/</guid>
+      <guid>http://localhost:1313/my-hextra-note-site/docs/csv-chart-c%23/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;CsvScottPlotIndustrial&lt;/h1&gt;&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;../demo.jpg&#34; title=&#34;demo&#34; alt=&#34;demo&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;demo&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;操作說明&lt;/h1&gt;&lt;h2&gt;🖱️ 檔案輸入+曲線繪製&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;-檔案輸入曲線繪製&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-%e6%aa%94%e6%a1%88%e8%bc%b8%e5%85%a5%e6%9b%b2%e7%b7%9a%e7%b9%aa%e8%a3%bd&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;1. 點擊 &lt;strong&gt;&amp;ldquo;選擇檔案&amp;rdquo;&lt;/strong&gt; 按鈕，開啟檔案選擇對話框。&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-點擊--按鈕開啟檔案選擇對話框&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e9%bb%9e%e6%93%8a--%e6%8c%89%e9%88%95%e9%96%8b%e5%95%9f%e6%aa%94%e6%a1%88%e9%81%b8%e6%93%87%e5%b0%8d%e8%a9%b1%e6%a1%86&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;2. 在對話框中瀏覽並選擇要分析的 CSV 檔案，然後點擊 &lt;strong&gt;&amp;ldquo;開啟&amp;rdquo;&lt;/strong&gt;。&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-在對話框中瀏覽並選擇要分析的-csv-檔案然後點擊-&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e5%9c%a8%e5%b0%8d%e8%a9%b1%e6%a1%86%e4%b8%ad%e7%80%8f%e8%a6%bd%e4%b8%a6%e9%81%b8%e6%93%87%e8%a6%81%e5%88%86%e6%9e%90%e7%9a%84-csv-%e6%aa%94%e6%a1%88%e7%84%b6%e5%be%8c%e9%bb%9e%e6%93%8a-&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;3. 程式將自動讀取並解析 CSV 檔案中的數據，第一欄必須為時間碼，其他欄位必須為數字，會自動排除非數字欄位&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;3-程式將自動讀取並解析-csv-檔案中的數據第一欄必須為時間碼其他欄位必須為數字會自動排除非數字欄位&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e7%a8%8b%e5%bc%8f%e5%b0%87%e8%87%aa%e5%8b%95%e8%ae%80%e5%8f%96%e4%b8%a6%e8%a7%a3%e6%9e%90-csv-%e6%aa%94%e6%a1%88%e4%b8%ad%e7%9a%84%e6%95%b8%e6%93%9a%e7%ac%ac%e4%b8%80%e6%ac%84%e5%bf%85%e9%a0%88%e7%82%ba%e6%99%82%e9%96%93%e7%a2%bc%e5%85%b6%e4%bb%96%e6%ac%84%e4%bd%8d%e5%bf%85%e9%a0%88%e7%82%ba%e6%95%b8%e5%ad%97%e6%9c%83%e8%87%aa%e5%8b%95%e6%8e%92%e9%99%a4%e9%9d%9e%e6%95%b8%e5%ad%97%e6%ac%84%e4%bd%8d&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;4. 數字欄位會列於再 下方Check 選單中，點擊選擇所需畫圖的欄位(多選)。&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4-數字欄位會列於再-下方check-選單中點擊選擇所需畫圖的欄位多選&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-%e6%95%b8%e5%ad%97%e6%ac%84%e4%bd%8d%e6%9c%83%e5%88%97%e6%96%bc%e5%86%8d-%e4%b8%8b%e6%96%b9check-%e9%81%b8%e5%96%ae%e4%b8%ad%e9%bb%9e%e6%93%8a%e9%81%b8%e6%93%87%e6%89%80%e9%9c%80%e7%95%ab%e5%9c%96%e7%9a%84%e6%ac%84%e4%bd%8d%e5%a4%9a%e9%81%b8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;5. 選擇完成後，點擊左下方 &lt;strong&gt;&amp;ldquo;繪製圖表&amp;rdquo;&lt;/strong&gt; 按鈕，程式將根據選定的數據欄位繪製曲線圖。&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;5-選擇完成後點擊左下方--按鈕程式將根據選定的數據欄位繪製曲線圖&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#5-%e9%81%b8%e6%93%87%e5%ae%8c%e6%88%90%e5%be%8c%e9%bb%9e%e6%93%8a%e5%b7%a6%e4%b8%8b%e6%96%b9--%e6%8c%89%e9%88%95%e7%a8%8b%e5%bc%8f%e5%b0%87%e6%a0%b9%e6%93%9a%e9%81%b8%e5%ae%9a%e7%9a%84%e6%95%b8%e6%93%9a%e6%ac%84%e4%bd%8d%e7%b9%aa%e8%a3%bd%e6%9b%b2%e7%b7%9a%e5%9c%96&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h2&gt;🖱️ 曲線數值分析&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;-曲線數值分析&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-%e6%9b%b2%e7%b7%9a%e6%95%b8%e5%80%bc%e5%88%86%e6%9e%90&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;1. 選擇 &lt;strong&gt;&amp;ldquo;起始時間&amp;rdquo;&lt;/strong&gt; 、&lt;strong&gt;&amp;ldquo;結束時間&amp;rdquo;&lt;/strong&gt; 設定分析時間範圍。&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-選擇---設定分析時間範圍&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e9%81%b8%e6%93%87---%e8%a8%ad%e5%ae%9a%e5%88%86%e6%9e%90%e6%99%82%e9%96%93%e7%af%84%e5%9c%8d&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;2. 選擇完成後，點擊左下方 &lt;strong&gt;&amp;ldquo;分析數據&amp;rdquo;&lt;/strong&gt; 按鈕，程式將根據選定的時間範圍，分析各欄位的Max./Min/AVG/STD數值。&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-選擇完成後點擊左下方--按鈕程式將根據選定的時間範圍分析各欄位的maxminavgstd數值&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e9%81%b8%e6%93%87%e5%ae%8c%e6%88%90%e5%be%8c%e9%bb%9e%e6%93%8a%e5%b7%a6%e4%b8%8b%e6%96%b9--%e6%8c%89%e9%88%95%e7%a8%8b%e5%bc%8f%e5%b0%87%e6%a0%b9%e6%93%9a%e9%81%b8%e5%ae%9a%e7%9a%84%e6%99%82%e9%96%93%e7%af%84%e5%9c%8d%e5%88%86%e6%9e%90%e5%90%84%e6%ac%84%e4%bd%8d%e7%9a%84maxminavgstd%e6%95%b8%e5%80%bc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;hr&gt;
+&lt;h1&gt;附註：ScottPlot 曲線圖操作說明&lt;/h1&gt;&lt;p&gt;使用 &lt;strong&gt;ScottPlot&lt;/strong&gt; 庫進行數據視覺化。為了提供流暢的使用者體驗，UI 介面支援多種滑鼠互動方式，讓使用者能直覺地瀏覽與分析曲線數據。&lt;/p&gt;
+&lt;h2&gt;🖱️ 互動操作指南&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;-互動操作指南&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-%e4%ba%92%e5%8b%95%e6%93%8d%e4%bd%9c%e6%8c%87%e5%8d%97&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;以下是針對 ScottPlot 控制項的預設操作說明：&lt;/p&gt;
+&lt;h3&gt;1. 全域縮放 (Global Zoom)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-全域縮放-global-zoom&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-%e5%85%a8%e5%9f%9f%e7%b8%ae%e6%94%be-global-zoom&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;操作方式：&lt;/strong&gt; 滾動滑鼠 &lt;strong&gt;中間滾輪&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能：&lt;/strong&gt; 以滑鼠當前位置為中心，同時針對 &lt;strong&gt;X 軸與 Y 軸&lt;/strong&gt; 進行放大或縮小，雙擊滾輪可以進行 &lt;strong&gt;Auto-Scale&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技巧1：&lt;/strong&gt; 向上滾動為放大（Zoom In），向下滾動為縮小（Zoom Out）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技巧2：&lt;/strong&gt; 游標移到 X軸線範圍(曲線區域外)，向上滾動為放大X軸（Zoom In），向下滾動為縮小X軸（Zoom Out），Y軸Scale不變。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技巧3：&lt;/strong&gt; 游標移到 Y軸線範圍(曲線區域外)，向上滾動為放大Y軸（Zoom In），向下滾動為縮小Y軸（Zoom Out），X軸Scale不變。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2. 畫布平移 (Panning)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-畫布平移-panning&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%e7%95%ab%e5%b8%83%e5%b9%b3%e7%a7%bb-panning&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;操作方式：&lt;/strong&gt; 按住 &lt;strong&gt;滑鼠左鍵&lt;/strong&gt; 並拖曳。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能：&lt;/strong&gt; 自由移動圖表畫布，可隨意平移曲線以觀察不同區段的數值，而不會改變縮放比例。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3. 視窗 Zoom&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;3-視窗-zoom&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-%e8%a6%96%e7%aa%97-zoom&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zoom Window：&lt;/strong&gt; 按住 &lt;strong&gt;Alt&lt;/strong&gt; 並以 &lt;strong&gt;滑鼠左鍵&lt;/strong&gt; 拖曳出視窗。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能：&lt;/strong&gt; 視窗放大功能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zoom X：&lt;/strong&gt; 按住 &lt;strong&gt;Alt&lt;/strong&gt; 並以 &lt;strong&gt;滑鼠左鍵&lt;/strong&gt; 於圖外X軸處拖曳出寬度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能：&lt;/strong&gt; X寬度放大功能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zoom Y：&lt;/strong&gt; 按住 &lt;strong&gt;Alt&lt;/strong&gt; 並以 &lt;strong&gt;滑鼠左鍵&lt;/strong&gt; 於圖外X軸處拖曳出高度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能：&lt;/strong&gt; Y高度放大功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;4. 進階單軸縮放 (Axes Zoom)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4-進階單軸縮放-axes-zoom&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-%e9%80%b2%e9%9a%8e%e5%96%ae%e8%bb%b8%e7%b8%ae%e6%94%be-axes-zoom&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;除了滾輪縮放外，ScottPlot 支援更精確的單軸拖曳縮放功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;操作方式：&lt;/strong&gt; 按住 &lt;strong&gt;滑鼠右鍵&lt;/strong&gt; 並拖曳（預設行為）。
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;註：&lt;/strong&gt; 若你的 UI 邏輯已自定義為右鍵縮放，其行為如下：&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;X 軸縮放：&lt;/strong&gt; 左右（X+/X-）拖曳滑鼠，可單獨拉伸或壓縮水平時間/數值軸。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Y 軸縮放：&lt;/strong&gt; 上下（Y+/Y-）拖曳滑鼠，可單獨調整垂直振幅/高度軸。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;5. 開啟選單&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;5-開啟選單&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#5-%e9%96%8b%e5%95%9f%e9%81%b8%e5%96%ae&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;操作方式：&lt;/strong&gt;  &lt;strong&gt;滑鼠左鍵&lt;/strong&gt; 點擊 Click，可以開啟選單。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能：&lt;/strong&gt; 選擇選單上所需要功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;💡 快捷鍵小技巧&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;-快捷鍵小技巧&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-%e5%bf%ab%e6%8d%b7%e9%8d%b5%e5%b0%8f%e6%8a%80%e5%b7%a7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;動作&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷鍵 / 滑鼠&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;功能描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;自動調整縮放&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;滑鼠中鍵點擊 (Middle Click)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;自動縮放至適配所有數據點 (Auto-Axis)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;開啟選單&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;滑鼠右鍵點擊 (Right Click)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;開啟設定選單，可匯出圖片或儲存數據&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;鎖定軸線&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;按住 &lt;code&gt;Alt&lt;/code&gt; + 拖曳&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;鎖定特定軸線進行操作&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/my-hextra-note-site/docs/%E9%9D%9C%E6%85%8B%E7%B6%B2%E9%A0%81%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-hextra-note-site/docs/%E9%9D%9C%E6%85%8B%E7%B6%B2%E9%A0%81%E9%83%A8%E7%BD%B2/</guid>
       <description>
         
         
