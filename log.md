@@ -76,7 +76,7 @@ git submodule add https://github.com/imfing/hextra.git themes/hextra
 Hugo 預設會產生一個 `hugo.toml` 或 `hugo.yaml`。為了讓 Hextra 運作，我們需要修改它。請用記事本（或 VS Code）打開專案根目錄下的 `hugo.toml`，將內容替換為：
 
 ```toml
-baseURL = "https://example.org/"
+baseURL = "https://example.org/"     #這裡需要修改成部屬的網址
 title = "我的知識庫"
 theme = "hextra"
 
@@ -130,3 +130,60 @@ Hextra 會根據你的資料夾結構自動生成側邊導覽列。例如：
 3.  設定 **GitHub Actions** 讓它自動變成 HTML。
 
 **你準備好將這個網站推送到 GitHub 了嗎？還是想先調整一下網站的內容？**
+
+## 404 錯誤修正
+
+這確實讓人感到困惑！如果你已經在 **Settings > Pages** 中確認 **Source** 是 **GitHub Actions**，但仍然看到 `404` 或 `Failed to create deployment` 的錯誤，這通常是因為 GitHub Actions 需要一個特定的「權限許可」。
+
+雖然你在網頁上開啟了開關，但該 Actions 腳本本身也需要獲得**寫入 (Write)** 權限才能完成發布。
+
+### 🛠 檢查這兩個隱藏的設定
+
+#### 1. 檢查 Workflow 的權限設定
+有時候 GitHub 預設會限制自動化腳本的權限。
+* 前往 **Settings** > **Actions** > **General**。
+* 拉到最下方的 **Workflow permissions** 區塊。
+* 確保選中 **「Read and write permissions」**。
+* 勾選下方 **「Allow GitHub Actions to create and approve pull requests」**。 <font color="red">!!重要!!</font>
+* 點擊 **Save**。
+
+
+
+---
+
+#### 2. 檢查 YAML 檔案中的 `permissions` 區塊
+請打開你專案中的 `.github/workflows/deploy.yml`，確保裡面包含了這段權限宣告。如果沒有這段，GitHub 即使開了開關也會拒絕連線：
+
+```yaml
+permissions:
+  contents: read
+  pages: write      # 必須有這一行
+  id-token: write   # 必須有這一行
+```
+
+---
+
+### 🔍 針對錯誤日誌的進階解析
+你的錯誤日誌提到：
+> `Error: Failed to create deployment (status: 404)`
+
+這在 `Source: GitHub Actions` 模式下，如果權限都對，還有一個可能是 **Hugo 沒有產生任何檔案**。
+
+**請幫我確認一下：**
+1. 點開 Actions 裡那個失敗的任務。
+2. 點擊 **`build`** 這個步驟。
+3. 展開 **`Run hugo --minify`** 的內容。
+4. 看看最後有沒有出現類似 `Web Server is available...` 或 `Total in 123 ms` 的成功訊息？
+    * 如果看到 **`Error: module "hextra" not found`**，那是因為主題路徑不對，導致 `public` 資料夾是空的，所以發布時會報 404（因為沒東西可以發布）。
+
+---
+
+### 💡 快速修復嘗試
+如果你確定設定都改好了，請嘗試做一次「強制空提交」來重新刷一次 Actions：
+
+```powershell
+git commit --allow-empty -m "Re-triggering deployment with correct permissions"
+git push
+```
+
+**如果還是報錯，請點開 Actions 裡的 `build` 步驟，看看 `hugo` 指令執行時有沒有出現任何紅字（尤其是關於 Theme 或 Submodule 的錯誤）？**
