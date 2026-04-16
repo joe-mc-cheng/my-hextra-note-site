@@ -1,6 +1,6 @@
 ---
 title: "本地空品雲端系統技術手冊"
-date: 2025-08-07
+date: 2026-04-15
 weight: 2
 ---
 
@@ -84,17 +84,18 @@ weight: 2
 * **運作機制**：中央系統擔任 **Modbus Master (主站)**，主動向設備發出讀取請求；iAeris 設備則為 **Slave (從站)** 響應資料。
 * **技術路徑**：支援 **Modbus RTU (RS-485)** 或 **Modbus TCP (Net)** 讀取暫存器資料。
 * **優點**：工業級標準，適合與 PLC 或工業控制系統直接連動。
+* **注意**：若採用Modbus TCP，設備端必須設置成固定IP。
 ![設備資料流](static/images/iaeris-system/data_flows.jpg)
 
 
 ---
 
 ## 🛠 快速設定指南
-1. **設定固定 IP**：進入主機的網路設定，手動配置 PC地固定IP模式，設置 IP/Mask/Gateway 與 DNS相關參數。此主機 IP 必須設定到設備端以 http post將資料傳送到系統。
+1. **設定固定 IP**：進入電腦主機的網路設定，手動配置 PC地固定IP模式，設置 IP/Mask/Gateway 與 DNS相關參數。此主機 IP 必須設定到設備端，設備才能將資料回傳到系統。
 2. **設備設定連線**：iAeris設備透過 RS485 連線至電腦，使用 `iAerisSW` 軟體，於 `setting` 頁面，將 Cloud 設定為 `Custom cloud(HTTP)`。
 ![設備設定setp1](static/images/iaeris-system/device_set1.jpg)
 ![設備設定setp2](static/images/iaeris-system/device_set2.jpg)
-3. **主機導向設定**：使用 `iAerisSW` 軟體，於 `WiFi/TCP` 頁面，先執行 Cloud `Refresh` 按鈕，再將主機固定 IP 填入 Address 欄位，並將 **Port 設定為 1180**。
+3. **主機導向設定**：使用 `iAerisSW` 軟體，於 `WiFi/TCP` 頁面，先執行 右側 Cloud 中下方的  `Refresh` 按鈕，再將主機固定 IP 填入 Address 欄位，並將 **Port 設定為 1180**。
 ![設備設定setp3](static/images/iaeris-system/device_set3.jpg)  
-4. **開啟系統**：於瀏覽器輸入 `http://<主機IP>:1180` 即可開啟管理網頁。
+4. **開啟系統**：瀏覽器輸入 `http://<主機IP>:1180` 即可開啟管理網頁。
 ![系統圖](static/images/iaeris-system/system.jpg)  

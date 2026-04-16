@@ -1,3 +1,10 @@
+---
+title: "Hextra 自動部屬 GitHub Page 指南"
+date: 2026-04-15
+weight: 2
+---
+
+
 # Hextra GitHub 部署指南 
 
 這份指南將帶領你從零開始，在 Windows 環境下建立並部署一個專業的 **Hextra** 知識庫網站。我們將流程拆解為：**環境準備**、**專案初始化**、**GitHub 雲端設定**、以及**日常維護**四個階段。
