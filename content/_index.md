@@ -14,10 +14,10 @@ title: 我的雲端知識庫
     <a href="./docs/" class="rounded-md bg-primary-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
       開始閱讀筆記 →<br>
     </a>
-    <a href="./docs/deployment-guide/" class="text-lg font-semibold leading-6 text-slate-900 dark:text-white">
+    <!-- <a href="./docs/deployment-guide/" class="text-lg font-semibold leading-6 text-slate-900 dark:text-white">
     靜態網頁自動部署
         <span aria-hidden="true">→</span>
-    </a>
+    </a> -->
   </div>
 </div>
 
