@@ -1,4 +1,10 @@
-﻿# CsvScottPlotIndustrial
+﻿---
+title: "CSV檔案繪圖工具說明"
+date: 2026-04-16
+weight: 2
+---
+
+# CsvScottPlotIndustrial
 ![demo](demo.jpg "demo")
 
 ---
