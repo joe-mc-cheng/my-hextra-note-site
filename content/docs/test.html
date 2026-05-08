@@ -1,0 +1,19 @@
+<form id="myForm">
+  <input type="text" name="name" placeholder="您的姓名" required>
+  <input type="email" name="email" placeholder="電子信箱" required>
+  <textarea name="message" placeholder="留下訊息"></textarea>
+  <button type="submit">送出</button>
+</form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz9q86WKvUfw8uo-PAXJ-Bxva0KoX-RIB7LF_id_6ay2lQmb802TEYEiIrOM9HFjhbj4A/exec';
+  const form = document.getElementById('myForm');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    // 顯示載入中狀態
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("送出成功！"))
+      .catch(error => console.error('錯誤！', error.message));
+  });
+</script>
