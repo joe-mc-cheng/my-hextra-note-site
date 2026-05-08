@@ -464,6 +464,63 @@ Stop-Service FlaskService
 ------------------------------
 📌 小提醒：
 第一次設定 NSSM 建議在主機上手動操作一次 GUI。一旦服務建立成功，後續的 CI/CD 流程只需要調用 nssm start/stop 即可。
-如果想知道如何透過指令（不開 GUI）建立服務，或者日誌滾動設定，請告訴我！
+
+
+透過指令（不開 GUI）建立服務，或者日誌滾動設定，請告訴我！
+若想在 CI/CD 流程中全自動化，或在沒有螢幕的伺服器上操作，使用指令（CLI）是最佳選擇。
+------------------------------
+## 1. 指令建立服務 (不開 GUI)
+以系統管理員身分執行以下 PowerShell 或 CMD 指令：
+```
+# 1. 建立服務並指定執行檔路徑
+.\nssm.exe install FlaskService "C:\App\my_flask_app.exe"
+# 2. 設定啟動目錄 (確保程式讀得到相對路徑的 templates/static)
+.\nssm.exe set FlaskService AppDirectory "C:\App"
+# 3. 設定服務為自動啟動
+.\nssm.exe set FlaskService Start SERVICE_AUTO_START
+# 4. 立即啟動服務
+.\nssm.exe start FlaskService
+```
+------------------------------
+## 2. 日誌滾動 (Log Rotation) 設定
+Flask 的 print 輸出與錯誤日誌如果不處理，久了會塞滿硬碟。NSSM 內建了強大的滾動功能：
+```
+# 1. 指定日誌路徑
+.\nssm.exe set FlaskService AppStdout "C:\App\logs\flask_out.log"
+.\nssm.exe set FlaskService AppStderr "C:\App\logs\flask_err.log"
+# 2. 開啟日誌滾動功能
+.\nssm.exe set FlaskService AppRotateFiles 1
+# 3. 設定滾動條件 (例如：檔案超過 1MB 就捲動)
+.\nssm.exe set FlaskService AppRotateSize 1048576
+# 4. 如果要限制檔案存活時間 (例如：超過 24 小時就捲動)# .\nssm.exe set FlaskService AppRotateSeconds 86400
+# 5. 啟動時先清空舊日誌 (0 代表保留並附加，1 代表清空重新開始)
+.\nssm.exe set FlaskService AppRotateOnline 0
+```
+------------------------------
+## 3. 部署腳本 (GitHub Action) 完整整合
+將上述邏輯整合進你的部署流程，確保每次更新都會自動配置：
+```
+      - name: 遠端指令更新
+        run: |
+          # 停止並覆蓋檔案
+          nssm stop FlaskService
+          Copy-Item "C:\Temp\new.exe" "C:\App\my_flask_app.exe" -Force
+          
+          # 確保日誌設定正確 (這幾行每次跑也不會壞掉)
+          nssm set FlaskService AppStdout "C:\App\logs\out.log"
+          nssm set FlaskService AppStderr "C:\App\logs\err.log"
+          nssm set FlaskService AppRotateFiles 1
+          nssm set FlaskService AppRotateSize 1048576
+          
+          # 啟動
+          nssm start FlaskService
+```
+------------------------------
+## 💡 關鍵檢查清單
+
+* 權限：執行 nssm 指令的 SSH 帳號必須具備管理員權限。
+* 路徑：C:\App\logs 資料夾必須手動先建立好，否則 NSSM 可能無法寫入日誌。
+* 查詢設定：若想確認目前的設定，可用 .\nssm.exe get FlaskService <參數名>。
+
 
 
