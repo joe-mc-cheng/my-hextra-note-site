@@ -128,7 +128,7 @@ weight: 2
 
 *   **STEP 2:** 進入雲端平台的「設定Telegram通知」頁面。
     > 🖼️ **畫面提示：** 將上述 Chat ID 填入下方「測試區」點擊送出。若手機收到測試訊息，再將 Chat ID 填入上方正式欄位，並將頂部的「通知」開關切換為藍色開啟狀態，點擊儲存。
-![上下限設定](../../static/images/iaeris-system/telegram_notidy_set.png)
+![上下限設定](../../static/images/iaeris-system/telegram_notify_set.png)
 
 
 ---
