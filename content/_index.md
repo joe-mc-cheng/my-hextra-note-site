@@ -7,7 +7,7 @@ title: 我的雲端知識庫
     歡迎來到我的 Hextra 筆記
   </h1>
   <p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
-    這裡記錄了關於 <strong>GitHub Page 部署</strong>、<strong>Python 開發</strong> 與 <strong>C#程式開發</strong> 的技術筆記與心得。
+    這裡記錄了關於 <strong>GitHub Page 部署</strong>、<strong>Python 開發</strong> 與 <strong>C#程式開發</strong> <strong>Linux</strong> <strong>HTTPS TLS</strong> 的技術筆記與心得。
   </p>
   
   <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -27,7 +27,7 @@ title: 我的雲端知識庫
 
 <div class="grid grid-cols-1 gap-6 mt-12 sm:grid-cols-2">
 
-### 🚀 Markdown 自動化網頁部署網
+### 🚀 GitHub Pages Markdown 自動化網頁部署網
 學習如何使用 GitHub Actions 將 Markdown 以 Hugo 來自動轉譯為靜態網頁，實現推播即更新。
 
 ### 🐍 Python 筆記
@@ -35,6 +35,12 @@ title: 我的雲端知識庫
 
 ### 🎯 C# 筆記
 記錄 .NET 環境設定、C# 語法特性，以及在 Windows 平台上的開發實務與解決方案。
+
+### 🎯 Linux 筆記
+記錄 Linux 平台上的開發實務與解決方案。
+
+### 🎯 HTTPS TLS 
+記錄 HTTPS TLS 相關的問題。
 
 </div>
 
